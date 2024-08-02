@@ -5,6 +5,9 @@ import torch.optim as optim
 from sklearn.metrics import f1_score
 from torch.utils.data import DataLoader, TensorDataset
 import numpy as np
+
+from networks.simple_model import SimpleModel
+
 # create a simple dataset
 
 # Dummy dataset: 100 samples, 10 features each
@@ -14,13 +17,7 @@ dataset = TensorDataset(X, y)
 dataloader = DataLoader(dataset, batch_size=10, shuffle=True)
 
 # define a simple nerual network model
-class SimpleModel(nn.Module):
-    def __init__(self):
-        super(SimpleModel, self).__init__()
-        self.fc = nn.Linear(10, 2)  # 10 input features, 2 output classes (binary classification)
 
-    def forward(self, x):
-        return self.fc(x)
 
 
 model = SimpleModel()
