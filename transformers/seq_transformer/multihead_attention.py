@@ -1,8 +1,7 @@
-import torch
 import torch.nn as nn
 
-from transformers.layer_norm import LayerNorm
-from transformers.self_attention import SelfAttention
+from transformers.seq_transformer.layer_norm import LayerNorm
+from transformers.seq_transformer.self_attention import SelfAttention
 
 
 class MultiHeadAttention(nn.Module):

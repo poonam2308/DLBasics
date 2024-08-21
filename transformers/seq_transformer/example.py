@@ -4,8 +4,8 @@ from torch.utils.data import DataLoader
 import torch.optim as optim
 import torch.nn as nn
 
-from transformers.custom_dataset import ToyDataset
-from transformers.transformer import Transformer
+from transformers.seq_transformer.custom_dataset import ToyDataset
+from transformers.seq_transformer.transformer import Transformer
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 

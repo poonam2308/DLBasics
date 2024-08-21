@@ -1,9 +1,8 @@
-import torch
 import torch.nn as nn
 
-from transformers.feed_forward import FeedForward
-from transformers.layer_norm import LayerNorm
-from transformers.multihead_attention import MultiHeadAttention
+from transformers.seq_transformer.feed_forward import FeedForward
+from transformers.seq_transformer.layer_norm import LayerNorm
+from transformers.seq_transformer.multihead_attention import MultiHeadAttention
 
 
 class EncoderLayer(nn.Module):
